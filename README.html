@@ -367,6 +367,36 @@ display: none;
 <p>The package hosts variable databases containing miRNA-target
 interactions, and provides functions to communicate with the
 <em>multiMiR</em> web server and its database.</p>
+<div id="installation" class="section level3">
+<h3>Installation</h3>
+<p><code>{r} BiocManager::install(&quot;multiMiR&quot;)</code></p>
+<ul>
+<li>We need a list of miRNAs’ name and a list of targets, such as genes
+and lncRNAs, to identify the interactions. miRNA-gene and miRNA-lncRNA
+interactions will be defined.</li>
+</ul>
+<blockquote>
+<p>miRNAs are known as nodes, while genes and lncRNAs are known as
+targets</p>
+</blockquote>
+<p>The function <code>get_multimir</code> provides the interactions we
+need based on <em>hsa; homo sapiens</em> project.</p>
+<ul>
+<li><p>we can choose the <code>predicted.cutoff</code> argument in this
+function to define the percentage of interactions. Usually, <em>80</em>
+prediction cutoff means top 80% significant interactions based on
+validated databases including <em>miRTarBase</em>, <em>miRDB</em>,
+<em>TargetScan</em>, and <em>TarBase</em>. We can use <em>20</em> cutoff
+in a highly significant detection of results, exploring less
+interactions number than 80 cutoff.</p></li>
+<li><p>Argument <code>table</code> in the function means the generation
+of table header and footer. It usually is “all”.</p></li>
+<li><p>Argument <code>predicted.cutoff.type</code> means the type of
+predicted cutoff is used. Usually “P” as <em>percent</em> is
+used.</p></li>
+</ul>
+<p><code>{r} &lt;- get_multimir(org = &quot;hsa&quot;,mirna = miRNA, target = genes, predicted.cutoff = 80, table = &quot;all&quot;,predicted.cutoff.type = &quot;p&quot;)</code></p>
+</div>
 </div>
 
 

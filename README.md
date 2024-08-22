@@ -16,4 +16,28 @@
 
 The package hosts variable databases containing miRNA-target interactions, and provides functions to communicate with the *multiMiR* web server and its database.
 
+### Installation
+
+```{r}
+BiocManager::install("multiMiR")
+```
+
+* We need a list of miRNAs' name and a list of targets, such as genes and lncRNAs, to identify the interactions. miRNA-gene and miRNA-lncRNA interactions will be defined. 
+
+> miRNAs are known as nodes, while genes and lncRNAs are known as targets
+
+The function `get_multimir` provides the interactions we need based on *hsa; homo sapiens* project. 
+
+* we can choose the `predicted.cutoff` argument in this function to define the percentage of interactions. Usually, *80* prediction cutoff means top 80% significant interactions based on validated databases including *miRTarBase*, *miRDB*, *TargetScan*, and *TarBase*. We can use *20* cutoff in a highly significant detection of results, exploring less interactions number than 80 cutoff.
+
+* Argument `table` in the function means the generation of table header and footer. It usually is "all".
+
+* Argument `predicted.cutoff.type` means the type of predicted cutoff is used. Usually "P" as *percent* is used.
+
+```{r}
+<- get_multimir(org = "hsa",mirna = miRNA, target = genes, predicted.cutoff = 80, table = "all",predicted.cutoff.type = "p")
+```
+
+
+
 
