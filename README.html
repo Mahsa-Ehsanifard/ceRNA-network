@@ -376,8 +376,8 @@ and lncRNAs, to identify the interactions. miRNA-gene and miRNA-lncRNA
 interactions will be defined.</li>
 </ul>
 <blockquote>
-<p>miRNAs are known as nodes, while genes and lncRNAs are known as
-targets</p>
+<p>miRNAs are known as source nodes, while genes and lncRNAs are known
+as targets</p>
 </blockquote>
 <p>The function <code>get_multimir</code> provides the interactions we
 need based on <em>hsa; homo sapiens</em> project.</p>
@@ -427,6 +427,25 @@ the <em>support-type</em> column, so that we remove <em>weak functional
 MIT</em> and keep <em>positive</em>, <em>strong</em>, or those written
 only <em>functional MIT</em>. <strong>MIT: MicroRNA-Target
 Interaction</strong></p></li>
+</ul>
+</div>
+<div id="nest-process" class="section level3">
+<h3>Nest process</h3>
+<p>You should add your attribute features to your final interactions
+table. Any feature describing the targets attributes. Clinical features,
+Molecular identification, cellular attribute, regulation or mutation
+levels, treated or non-treated states, or etc can be used. These
+features are used for detecting and defining particular targets in the
+ceRNA network.</p>
+<ul>
+<li>The final prepared table is transferred to
+<strong>Cytoscape</strong> software for contructing and analyzing the
+ceRNA network. <strong>Source</strong> nodes should be defined as
+<em>miRNA</em> column with <em>miR-Ids</em>, and <em>Target</em> nodes
+should be defined as <em>target</em> columns with <em>symbols or
+ids</em>. The columns related to attributes should be defined as
+<em>target-attribute</em>. Then, You can design the network in
+Cytoscape.</li>
 </ul>
 </div>
 </div>

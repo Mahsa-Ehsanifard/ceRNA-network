@@ -24,8 +24,7 @@ BiocManager::install("multiMiR")
     and lncRNAs, to identify the interactions. miRNA-gene and
     miRNA-lncRNA interactions will be defined.
 
-> miRNAs are known as nodes, while genes and lncRNAs are known as
-> targets
+> miRNAs are known as source nodes, while genes and lncRNAs are known as targets
 
 The function `get_multimir` provides the interactions we need based on
 *hsa; homo sapiens* project.
@@ -68,3 +67,8 @@ tarbase   	MIMAT0004954	hsa-miR-543	          ADAM22	   53616	  ENSG00000008277	
 
 * For the databases without score number to choose, we can filter the *support-type* column, so that we remove *weak functional MIT* and keep *positive*, *strong*, or those written only *functional MIT*.  **MIT: MicroRNA-Target Interaction**
 
+### Nest process
+
+You should add your attribute features to your final interactions table. Any feature describing the targets attributes. Clinical features, Molecular identification, cellular attribute, regulation or mutation levels, treated or non-treated states, or etc can be used. These features are used for detecting and defining particular targets in the ceRNA network.
+
+* The final prepared table is transferred to **Cytoscape** software for contructing and analyzing the ceRNA network. **Source** nodes should be defined as *miRNA* column with *miR-Ids*, and *Target* nodes should be defined as *target* columns with *symbols or ids*. The columns related to attributes should be defined as *target-attribute*. Then, You can design the network in Cytoscape. 
