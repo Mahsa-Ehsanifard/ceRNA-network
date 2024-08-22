@@ -396,6 +396,40 @@ predicted cutoff is used. Usually “P” as <em>percent</em> is
 used.</p></li>
 </ul>
 <p><code>{r} &lt;- get_multimir(org = &quot;hsa&quot;,mirna = miRNA, target = genes, predicted.cutoff = 80, table = &quot;all&quot;,predicted.cutoff.type = &quot;p&quot;)</code></p>
+<ul>
+<li>You can filter the final output table based on database column to
+release the results based on the validated databases.</li>
+</ul>
+<pre><code>database    mature_mirna_acc    mature_mirna_id target_symbol   target_entrez   target_ensembl  experiment  support_type    pubmed_id   type    score
+mirtarbase  MIMAT0004954    hsa-miR-543 ADD1    118 ENSG00000087274 HITS-CLIP   Functional MTI (Weak)   23824327    validated   NA
+mirtarbase  MIMAT0002818    hsa-miR-496 AKT1    207 ENSG00000142208 PAR-CLIP    Functional MTI (Weak)   22100165    validated   NA
+mirtarbase  MIMAT0004954    hsa-miR-543 AMD1    262 ENSG00000123505 PAR-CLIP    Functional MTI (Weak)   27292025    validated   NA
+mirtarbase  MIMAT0004954    hsa-miR-543 AMPD3   272 ENSG00000133805 HITS-CLIP   Functional MTI (Weak)   23824327    validated   NA
+mirtarbase  MIMAT0004954    hsa-miR-543 AMPD3   272 ENSG00000133805 HITS-CLIP   Functional MTI (Weak)   23313552    validated   NA
+mirtarbase  MIMAT0004954    hsa-miR-543 AMPD3   272 ENSG00000133805 HITS-CLIP   Functional MTI (Weak)   27418678    validated   NA
+mirdb         MIMAT0004954  hsa-miR-543 FBXO34  55030   ENSG00000178974 NA  NA  NA  predicted   99.51948263
+mirdb       MIMAT0004954    hsa-miR-543 NWD2    57495   ENSG00000174145 NA  NA  NA  predicted   99.49892675
+mirdb         MIMAT0004954  hsa-miR-543 DMXL2   23312   ENSG00000104093 NA  NA  NA  predicted   99.48519779
+mirdb       MIMAT0004954    hsa-miR-543 ONECUT2 9480    ENSG00000119547 NA  NA  NA  predicted   99.1432345
+mirdb         MIMAT0004954  hsa-miR-543 MAPK1   5594    ENSG00000100030 NA  NA  NA  predicted   99.11935315
+mirdb         MIMAT0004954  hsa-miR-543 ZBTB43  23099   ENSG00000169155 NA  NA  NA  predicted   99.10216587
+mirdb         MIMAT0004954  hsa-miR-543 ANO5    203859  ENSG00000171714 NA  NA  NA  predicted   99.03360751
+mirdb         MIMAT0004954  hsa-miR-543 LIFR    3977    ENSG00000113594 NA  NA  NA  predicted   98.99188046
+mirdb         MIMAT0004954  hsa-miR-543 KLHL5   51088   ENSG00000109790 NA  NA  NA  predicted   98.84214836
+targetscan  MIMAT0004954    hsa-miR-543 CASK    8573    ENSG00000147044 NA  NA  NA  predicted   -0.156
+targetscan  MIMAT0004954    hsa-miR-543 CMPK1   51727   ENSG00000162368 NA  NA  NA  predicted   -0.156
+targetscan  MIMAT0004954    hsa-miR-543 C7orf25 79020   ENSG00000136197 NA  NA  NA  predicted   -0.156
+targetscan  MIMAT0004954    hsa-miR-543 CDC20B  166979  ENSG00000164287 NA  NA  NA  predicted   -0.156
+targetscan  MIMAT0004954    hsa-miR-543 ADIRF   10974   ENSG00000148671 NA  NA  NA  predicted   -0.156
+targetscan  MIMAT0004954    hsa-miR-543 ARL6    84100   ENSG00000113966 NA  NA  NA  predicted   -0.156
+targetscan  MIMAT0004954    hsa-miR-543 ING5    84289   ENSG00000168395 NA  NA  NA  predicted   -0.156
+targetscan  MIMAT0004954    hsa-miR-543 EEF2KMT 196483  ENSG00000118894 NA  NA  NA  predicted   -0.156
+tarbase     MIMAT0004954    hsa-miR-543 DHX33   56919   ENSG00000005100 Degradome sequencing    positive        validated   NA
+tarbase     MIMAT0004954    hsa-miR-543 ADAM22  53616   ENSG00000008277 Degradome sequencing    positive        validated   NA
+tarbase     MIMAT0004954    hsa-miR-543 REV3L   5980    ENSG00000009413 Degradome sequencing    positive        validated   NA
+tarbase     MIMAT0004954    hsa-miR-543 IDS 3423    ENSG00000010404 Degradome sequencing    positive        validated   NA
+tarbase     MIMAT0004954    hsa-miR-543 SAMD4A  23034   ENSG00000020577 Degradome sequencing    positive        validated   NA
+tarbase     MIMAT0004954    hsa-miR-543 ZFYVE16 9765    ENSG00000039319 Degradome sequencing    positive        validated   NA</code></pre>
 </div>
 </div>
 
